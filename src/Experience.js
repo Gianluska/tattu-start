@@ -16,8 +16,6 @@ import {
 import { useControls, button } from "leva";
 import { MeshRefractionMaterial } from "./shaders/MeshRefractionMaterial";
 
-import { Perf } from "r3f-perf";
-
 export function Experience() {
   const { autoRotate, text, shadow, ...config } = useControls({
     clearcoat: { value: 1, min: 0.1, max: 1 },
@@ -40,7 +38,6 @@ export function Experience() {
       camera={{ position: [10, 0, 70], zoom: 55 }}
       gl={{ preserveDrawingBuffer: true }}
     >
-      {/* <Perf  /> */}
       <color attach="background" args={["#525252"]} />
       {/** The text and the grid */}
       <Text
